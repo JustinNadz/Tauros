@@ -87,31 +87,36 @@
             <div
                 class="hero-blob-2 absolute bottom-1/4 right-1/4 w-96 h-96 bg-enterprise-blue/5 blur-[120px] rounded-full">
             </div>
-            <div
-                class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-left">
-                <div class="hero-tagline mb-6 inline-flex items-center gap-4">
-                    <span class="font-label-caps text-label-caps tracking-[0.2em] text-primary">SUCCESS
-                        ENGINEERED</span>
-                </div>
-                <h1
-                    class="hero-h1 font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 max-w-4xl leading-tight hero-text-glow">
-                    Engineering the Future of <span class="text-primary italic">Enterprise.</span>
-                </h1>
-                <p class="hero-sub font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
-                    Scalable, high-performance architecture built for technical integrity. We bridge the gap between
-                    complex requirements and seamless execution.
-                </p>
-                <div class="hero-ctas flex flex-col sm:flex-row items-stretch sm:items-start gap-4 w-full sm:w-auto mt-4">
-                    <button id="hero-contact-btn"
-                        class="w-full sm:w-auto bg-slate-900 text-surface px-8 py-4 font-label-caps text-label-caps hover:bg-tech-emerald hover:text-slate-900 transition-all active:scale-95 duration-300 flex justify-center items-center gap-3"
-                        aria-label="Get started with Taurus">
-                        Get Started <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </button>
-                    <a href="#services"
-                        class="w-full sm:w-auto justify-center px-8 py-4 font-label-caps text-label-caps border border-outline-variant hover:border-primary hover:text-primary transition-all duration-300 flex items-center gap-3"
-                        aria-label="Explore our services">
-                        Explore Services <span class="material-symbols-outlined text-sm">expand_more</span>
-                    </a>
+            <div class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-left">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    
+                    <!-- LEFT COLUMN: TEXT -->
+                    <div class="flex-1 w-full">
+                        <div class="hero-tagline mb-6 inline-flex items-center gap-4">
+                            <span class="font-label-caps text-label-caps tracking-[0.2em] text-primary">SUCCESS ENGINEERED</span>
+                        </div>
+                        <h1 class="hero-h1 font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 max-w-2xl leading-tight hero-text-glow">
+                            Engineering the Future of <span class="text-primary italic">Enterprise.</span>
+                        </h1>
+                        <p class="hero-sub font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                            Scalable, high-performance architecture built for technical integrity. We bridge the gap between complex requirements and seamless execution.
+                        </p>
+                        <div class="hero-ctas flex flex-col sm:flex-row items-stretch sm:items-start gap-4 w-full sm:w-auto mt-4">
+                            <button id="hero-contact-btn" class="w-full sm:w-auto bg-slate-900 text-surface px-8 py-4 font-label-caps text-label-caps hover:bg-tech-emerald hover:text-slate-900 transition-all active:scale-95 duration-300 flex justify-center items-center gap-3" aria-label="Get started with Taurus">
+                                Get Started <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                            <a href="#services" class="w-full sm:w-auto justify-center px-8 py-4 font-label-caps text-label-caps border border-outline-variant hover:border-primary hover:text-primary transition-all duration-300 flex items-center gap-3" aria-label="Explore our services">
+                                Explore Services <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: IMAGE -->
+                    <div class="flex-1 w-full relative group hero-img-container hidden md:block">
+                        <div class="absolute inset-0 bg-tech-emerald/20 blur-3xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Enterprise Data & Architecture" class="relative z-10 w-full h-[500px] object-cover rounded-2xl shadow-2xl border border-outline-variant/30 transform transition-transform duration-700 group-hover:scale-[1.02]">
+                    </div>
+
                 </div>
             </div>
         </section>

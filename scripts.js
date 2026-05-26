@@ -112,6 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
     gsap.set('.hero-sub',                      { opacity: 0, y: 40 });
     gsap.set('.hero-ctas',                     { opacity: 0, y: 20 });
     gsap.set('.hero-blob-1, .hero-blob-2',     { scale: 0, opacity: 0 });
+    gsap.set('.hero-img-container',            { opacity: 0, x: 50, scale: 0.95 });
 
     /* ── Word-split hero headline (desktop only) ── */
     const heroH1 = document.querySelector('.hero-h1');
@@ -142,7 +143,8 @@ window.addEventListener('DOMContentLoaded', () => {
         intro
             .to(allWords,     { yPercent: 0, rotateZ: 0, duration: 1, stagger: 0.07 }, '-=0.5')
             .to('.hero-sub',  { opacity: 1, y: 0, duration: 0.8 }, '-=0.5')
-            .to('.hero-ctas', { opacity: 1, y: 0, duration: 0.7 }, '-=0.6');
+            .to('.hero-ctas', { opacity: 1, y: 0, duration: 0.7 }, '-=0.6')
+            .to('.hero-img-container', { opacity: 1, x: 0, scale: 1, duration: 1, ease: 'expo.out' }, '-=0.6');
     } else {
         /* Mobile: simple fade-in block */
         intro
