@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TAURUS | Engineering the Future of Enterprise</title>
+    <meta name="description"
+        content="Taurus delivers scalable, high-performance enterprise software architecture. We bridge complex requirements with seamless execution." />
+    <!-- Favicon -->
+    <link rel="icon" href="705464076_1582198350580127_93757285403700058_n-removebg-preview.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <script src="tailwind.config.js"></script>
+    <!-- GSAP Core + Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+</head>
+
+<body class="bg-background text-on-background selection:bg-tech-emerald selection:text-primary overflow-x-hidden">
+
+
+    <!-- ===================== TOP NAVIGATION ===================== -->
+    <header class="bg-surface/80 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30" id="top"
+        data-gsap="nav">
+        <nav
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a href="#top" aria-label="Taurus Home" class="flex items-center">
+                <img src="705464076_1582198350580127_93757285403700058_n-removebg-preview.png" alt="Taurus Logo"
+                    class="h-10 object-contain">
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center gap-10">
+                <a class="text-label-caps font-label-caps text-primary border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors"
+                    href="#services">Services</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="#about">About</a>
+                <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors"
+                    href="#projects">Projects</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button id="contact-btn"
+                    class="hidden md:flex bg-slate-900 text-surface px-6 py-3 font-label-caps text-label-caps hover:bg-tech-emerald hover:text-slate-900 transition-all active:scale-95 duration-300 items-center"
+                    aria-label="Open contact form">
+                    Contact Us
+                </button>
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded focus:outline-none"
+                    aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="hamburger-line block w-6 h-0.5 bg-on-background transition-all duration-300"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-on-background transition-all duration-300"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-on-background transition-all duration-300"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="md:hidden hidden bg-surface border-t border-outline-variant/30 px-margin-mobile py-6 flex flex-col gap-5">
+            <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors mobile-nav-link"
+                href="#story">Our Story</a>
+            <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors mobile-nav-link"
+                href="#services">Services</a>
+            <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors mobile-nav-link"
+                href="#about">About</a>
+            <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors mobile-nav-link"
+                href="#projects">Projects</a>
+            <a class="text-label-caps font-label-caps text-on-surface-variant hover:text-primary transition-colors mobile-nav-link"
+                href="#contact-section">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative min-h-[70vh] md:min-h-[650px] flex flex-col justify-center overflow-hidden mesh-gradient py-20" id="hero">
+            <div class="absolute inset-0 grid-overlay opacity-50"></div>
+            <div
+                class="hero-blob-1 absolute top-1/4 left-1/4 w-96 h-96 bg-tech-emerald/10 blur-[120px] rounded-full animate-pulse">
+            </div>
+            <div
+                class="hero-blob-2 absolute bottom-1/4 right-1/4 w-96 h-96 bg-enterprise-blue/5 blur-[120px] rounded-full">
+            </div>
+            <div
+                class="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-left">
+                <div class="hero-tagline mb-6 inline-flex items-center gap-4">
+                    <span class="font-label-caps text-label-caps tracking-[0.2em] text-primary">SUCCESS
+                        ENGINEERED</span>
+                </div>
+                <h1
+                    class="hero-h1 font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 max-w-4xl leading-tight hero-text-glow">
+                    Engineering the Future of <span class="text-primary italic">Enterprise.</span>
+                </h1>
+                <p class="hero-sub font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                    Scalable, high-performance architecture built for technical integrity. We bridge the gap between
+                    complex requirements and seamless execution.
+                </p>
+                <div class="hero-ctas flex flex-col sm:flex-row items-stretch sm:items-start gap-4 w-full sm:w-auto mt-4">
+                    <button id="hero-contact-btn"
+                        class="w-full sm:w-auto bg-slate-900 text-surface px-8 py-4 font-label-caps text-label-caps hover:bg-tech-emerald hover:text-slate-900 transition-all active:scale-95 duration-300 flex justify-center items-center gap-3"
+                        aria-label="Get started with Taurus">
+                        Get Started <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                    <a href="#services"
+                        class="w-full sm:w-auto justify-center px-8 py-4 font-label-caps text-label-caps border border-outline-variant hover:border-primary hover:text-primary transition-all duration-300 flex items-center gap-3"
+                        aria-label="Explore our services">
+                        Explore Services <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== VALUE PROPOSITION METRICS STRIP ===================== -->
+        <section class="bg-slate-900 py-10 relative overflow-hidden flex" aria-label="Key metrics">
+            <div class="animate-slide-infinite shrink-0">
+                <!-- Group 1 -->
+                <div class="flex items-center gap-20 md:gap-40 px-10 md:px-20 w-max">
+                    <div class="text-center w-32">
+                        <div class="metric-value text-tech-emerald text-headline-sm font-headline-sm mb-1"
+                            data-value="99.9%">99.9%</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Uptime SLA
+                        </div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="metric-value text-tech-emerald text-headline-sm font-headline-sm mb-1"
+                            data-value="24/7">24/7</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Global
+                            Support</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">150+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Engineers
+                        </div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">0.01ms</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Median
+                            Latency</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">500+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Projects
+                            Delivered</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">40+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Countries
+                            Served</div>
+                    </div>
+                </div>
+                <!-- Group 2 (duplicate for infinite scroll) -->
+                <div class="flex items-center gap-20 md:gap-40 px-10 md:px-20 w-max" aria-hidden="true">
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">99.9%</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Uptime SLA
+                        </div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">24/7</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Global
+                            Support</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">150+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Engineers
+                        </div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">0.01ms</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Median
+                            Latency</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">500+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Projects
+                            Delivered</div>
+                    </div>
+                    <div class="text-center w-32">
+                        <div class="text-tech-emerald text-headline-sm font-headline-sm mb-1">40+</div>
+                        <div class="text-label-caps font-label-caps text-primary-fixed/50 whitespace-nowrap">Countries
+                            Served</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== OUR STORY ===================== -->
+        <section class="py-32 bg-white border-t border-outline-variant/20" id="story">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+                <!-- Top Header -->
+                <div class="story-header flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20">
+                    <div>
+                        <span
+                            class="story-eyebrow text-label-caps font-label-caps text-secondary tracking-widest uppercase mb-4 block">Our
+                            Story</span>
+                        <h2
+                            class="story-h2 font-display-lg text-display-lg-mobile md:text-display-lg leading-tight tracking-tighter max-w-xl">
+                            Built to Revolutionize <span class="text-secondary">Enterprise.</span>
+                        </h2>
+                    </div>
+                    <p class="story-sub text-body-lg font-body-lg text-on-surface-variant max-w-sm leading-relaxed">
+                        From a passionate team with a bold new vision, to building the next generation of scalable
+                        infrastructure — this is where our story begins.
+                    </p>
+                </div>
+                <div class="max-w-4xl mx-auto text-left">
+                    <p class="text-body-lg md:text-[1.35rem] font-body-lg text-on-background leading-relaxed mb-8">
+                        Taurus was founded with a singular, practical mission: to build the next generation of scalable
+                        enterprise software without the unnecessary complexity. We believe that businesses deserve
+                        straightforward, high-performance architecture from day one.
+                    </p>
+                    <p class="text-body-lg font-body-md text-on-surface-variant leading-relaxed mb-12">
+                        Instead of acting as just another vendor, we operate as true engineering partners. We prioritize
+                        zero technical debt, seamless execution, and scalable systems that actually work in the real
+                        world. We are building for the future, prioritizing logic and performance over fluff.
+                    </p>
+
+                    <div
+                        class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-outline-variant/30 text-left">
+                        <div>
+                            <span
+                                class="text-label-caps font-label-caps text-secondary tracking-widest text-[10px] block mb-2">01</span>
+                            <h4 class="text-body-md font-bold text-on-background">Innovation</h4>
+                        </div>
+                        <div>
+                            <span
+                                class="text-label-caps font-label-caps text-secondary tracking-widest text-[10px] block mb-2">02</span>
+                            <h4 class="text-body-md font-bold text-on-background">Clean Code</h4>
+                        </div>
+                        <div>
+                            <span
+                                class="text-label-caps font-label-caps text-secondary tracking-widest text-[10px] block mb-2">03</span>
+                            <h4 class="text-body-md font-bold text-on-background">Scalability</h4>
+                        </div>
+                        <div>
+                            <span
+                                class="text-label-caps font-label-caps text-secondary tracking-widest text-[10px] block mb-2">04</span>
+                            <h4 class="text-body-md font-bold text-on-background">Partnership</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Founders Quote -->
+                <div class="story-quote pt-16 mt-16 max-w-6xl mx-auto">
+                    <div class="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+                        <!-- Styled Picture -->
+                        <div class="w-full md:w-1/2">
+                            <img src="photo/IMG_0487.jpeg" alt="Daven Javier Martinez" class="w-full h-auto rounded-xl shadow-lg">
+                        </div>
+
+                        <div class="w-full md:w-1/2 space-y-6 md:space-y-8">
+                            <blockquote
+                                class="text-[1.5rem] md:text-[2rem] font-display-lg font-bold leading-snug tracking-tight text-on-background border-l-4 border-tech-emerald pl-6">
+                                "We didn't start Taurus to be a consultancy. We started it because we were <span
+                                    class="text-secondary italic">angry at mediocrity</span> — and we had the conviction
+                                that enterprise software deserved to be extraordinary."
+                            </blockquote>
+                            <div class="pt-4">
+                                <p class="text-headline-sm font-semibold text-on-background">Daven Javier Martinez</p>
+                                <p
+                                    class="text-label-caps font-label-caps text-on-surface-variant tracking-widest text-[11px] mt-2">
+                                    CO-FOUNDER & CTO
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===================== TRANSFORMATION SLIDER ===================== -->
+        <section class="py-24 bg-white border-t border-outline-variant/30" id="about">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+                    <div>
+                        <span class="section-eyebrow text-label-caps font-label-caps text-secondary tracking-widest uppercase mb-4 block">Transformation</span>
+                        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight tracking-tighter max-w-xl">
+                            From Chaos to <span class="text-secondary">Ecosystems.</span>
+                        </h2>
+                    </div>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-sm leading-relaxed">
+                        Break free from fragmented manual processes. Taurus engineers unified software architectures that turn operational entropy into scaled success.
+                    </p>
+                </div>
+
+                <!-- Interactive Before / After Slider -->
+                <div class="relative w-full aspect-[16/8] rounded-xl overflow-hidden border border-outline-variant/30 shadow-2xl cursor-col-resize"
+                    id="viz-container">
+                    <!-- Before Panel -->
+                    <div class="absolute inset-0 w-full h-full grayscale overflow-hidden" id="before-panel">
+                        <div class="w-full h-full bg-slate-100 relative">
+                            <div class="absolute inset-0 p-8 opacity-70 overflow-hidden">
+                                <div class="flex gap-1 mb-1">
+                                    <div
+                                        class="w-32 h-7 bg-slate-300 rounded text-[9px] flex items-center justify-center text-slate-500 font-mono">
+                                        Project</div>
+                                    <div
+                                        class="w-20 h-7 bg-slate-300 rounded text-[9px] flex items-center justify-center text-slate-500 font-mono">
+                                        Q1</div>
+                                    <div
+                                        class="w-20 h-7 bg-slate-300 rounded text-[9px] flex items-center justify-center text-slate-500 font-mono">
+                                        Q2</div>
+                                    <div
+                                        class="w-20 h-7 bg-slate-300 rounded text-[9px] flex items-center justify-center text-slate-500 font-mono">
+                                        Status</div>
+                                    <div class="flex-1 h-7 bg-slate-300 rounded"></div>
+                                </div>
+                                <div class="flex gap-1 mb-1">
+                                    <div class="w-32 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-red-100 border border-red-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-yellow-100 border border-yellow-200 rounded"></div>
+                                    <div class="flex-1 h-7 bg-white border border-slate-200 rounded"></div>
+                                </div>
+                                <div class="flex gap-1 mb-1">
+                                    <div class="w-32 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-red-100 border border-red-200 rounded"></div>
+                                    <div class="flex-1 h-7 bg-white border border-slate-200 rounded"></div>
+                                </div>
+                                <div class="flex gap-1 mb-1">
+                                    <div class="w-32 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-yellow-100 border border-yellow-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="flex-1 h-7 bg-white border border-slate-200 rounded"></div>
+                                </div>
+                                <div class="flex gap-1">
+                                    <div class="w-32 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-white border border-slate-200 rounded"></div>
+                                    <div class="w-20 h-7 bg-red-100 border border-red-200 rounded"></div>
+                                    <div class="flex-1 h-7 bg-white border border-slate-200 rounded"></div>
+                                </div>
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <span
+                                    class="font-black uppercase tracking-[0.3em] text-slate-300 text-[6vw] blur-[1px]">CHAOS</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-5 left-5 bg-white/90 backdrop-blur px-3 py-1 rounded-full border border-slate-200 shadow-sm">
+                            <span class="font-label-caps text-[10px] text-slate-500 tracking-widest">MANUAL
+                                TRACKING</span>
+                        </div>
+                    </div>
+
+                    <!-- After Panel -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden" id="after-panel"
+                        style="clip-path: inset(0 0 0 50%);">
+                        <div class="w-full h-full bg-white">
+                            <div class="absolute inset-0 p-8 flex flex-col gap-4">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+                                            <span class="material-symbols-outlined text-white text-sm">grid_view</span>
+                                        </div>
+                                        <div class="h-3 w-28 bg-slate-100 rounded"></div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div
+                                            class="h-6 w-6 bg-tech-emerald/20 rounded-full border border-tech-emerald/40">
+                                        </div>
+                                        <div class="h-6 w-20 bg-slate-900 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-3 gap-4 flex-1">
+                                    <div class="col-span-2 bg-slate-50 border border-slate-200 rounded-lg p-5">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <div>
+                                                <p class="font-label-caps text-secondary text-[9px] tracking-widest">
+                                                    AUTOMATED INTELLIGENCE</p>
+                                                <h3 class="font-bold text-on-surface text-base">Efficiency Index</h3>
+                                            </div>
+                                            <span class="text-tech-emerald font-black text-lg">+240%</span>
+                                        </div>
+                                        <div class="h-16 w-full flex items-end gap-1">
+                                            <div class="flex-1 bg-tech-emerald/50 h-[40%] rounded-t-sm"></div>
+                                            <div class="flex-1 bg-tech-emerald/65 h-[65%] rounded-t-sm"></div>
+                                            <div class="flex-1 bg-tech-emerald/75 h-[50%] rounded-t-sm"></div>
+                                            <div class="flex-1 bg-tech-emerald h-[85%] rounded-t-sm"></div>
+                                            <div class="flex-1 bg-tech-emerald h-[75%] rounded-t-sm"></div>
+                                            <div class="flex-1 bg-tech-emerald h-[100%] rounded-t-sm"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-1 flex flex-col gap-4">
+                                        <div
+                                            class="bg-primary text-white p-4 rounded-lg flex-1 flex flex-col justify-between">
+                                            <span class="material-symbols-outlined text-sm">bolt</span>
+                                            <p class="font-label-caps text-[9px] opacity-70 tracking-widest">DATA SYNC
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="bg-white border border-slate-200 p-4 rounded-lg flex-1 flex flex-col justify-between">
+                                            <span
+                                                class="material-symbols-outlined text-secondary text-sm">verified_user</span>
+                                            <p
+                                                class="font-label-caps text-[9px] text-on-surface-variant tracking-widest">
+                                                SECURE NODE</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute top-5 right-5 bg-tech-emerald px-3 py-1 rounded-full border border-white shadow-sm">
+                            <span class="font-label-caps text-[10px] text-primary tracking-widest">ENGINEERED
+                                SUCCESS</span>
+                        </div>
+                    </div>
+
+                    <!-- Draggable Slider Handle -->
+                    <div class="absolute top-0 bottom-0 w-[2px] bg-primary z-30 flex items-center justify-center"
+                        id="viz-slider" style="left: 50%;">
+                        <div
+                            class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg -translate-x-1/2 border-4 border-white">
+                            <span class="material-symbols-outlined text-sm">unfold_more</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-on-surface-variant/60 mt-6 font-label-caps text-[10px] tracking-[0.3em]">←
+                    DRAG TO COMPARE →</p>
+            </div>
+        </section>
+
+        <!-- ===================== SERVICES / HOW IT WORKS ===================== -->
+        <section class="py-32 bg-white border-t border-outline-variant/20" id="services">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row gap-16 md:gap-32">
+
+                    <!-- LEFT: Sticky Label + Title -->
+                    <div class="sticky-sidebar md:w-72 flex-shrink-0 pb-10 mb-2 border-b border-outline-variant/30 md:border-b-0 md:pb-0 md:mb-0">
+                        <div class="md:sticky md:top-32">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-8 h-[1px] bg-on-surface-variant/40"></div>
+                                <span
+                                    class="text-label-caps font-label-caps text-on-surface-variant tracking-widest uppercase text-[10px]">What
+                                    We Do</span>
+                            </div>
+                            <h2
+                                class="text-display-lg-mobile font-display-lg font-bold leading-tight tracking-tighter mb-6">
+                                How It<br />Works</h2>
+                            <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                                A precision-engineered four-pillar approach to building software that scales. <span
+                                    class="text-secondary font-medium">We handle the heavy lifting so you don't have
+                                    to.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Numbered Items with Dividers -->
+                    <div class="flex-1">
+
+                        <!-- Item 01 -->
+                        <div class="group py-10 border-t border-outline-variant/30 flex gap-10 items-start hover:bg-surface-container-lowest transition-colors duration-300 -mx-4 px-4 cursor-pointer service-item"
+                            data-service="agile">
+                            <span
+                                class="text-3xl font-light font-label-caps text-outline/50 w-10 flex-shrink-0 pt-1">01</span>
+                            <div class="flex-1">
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Agile Engineering
+                                </h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">Rapid
+                                    deployment cycles and test-driven development to ensure your product hits the market
+                                    with zero technical debt.</p>
+                                <a href="#contact-section"
+                                    class="inline-flex items-center gap-2 mt-4 text-secondary font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 02 -->
+                        <div class="group py-10 border-t border-outline-variant/30 flex gap-10 items-start hover:bg-surface-container-lowest transition-colors duration-300 -mx-4 px-4 cursor-pointer service-item"
+                            data-service="cloud">
+                            <span
+                                class="text-3xl font-light font-label-caps text-outline/50 w-10 flex-shrink-0 pt-1">02</span>
+                            <div class="flex-1">
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Cloud
+                                    Infrastructure</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">Multi-cloud
+                                    orchestration and containerized workloads designed for 100% elastic scalability and
+                                    resilience.</p>
+                                <a href="#contact-section"
+                                    class="inline-flex items-center gap-2 mt-4 text-secondary font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 03 -->
+                        <div class="group py-10 border-t border-outline-variant/30 flex gap-10 items-start hover:bg-surface-container-lowest transition-colors duration-300 -mx-4 px-4 cursor-pointer service-item"
+                            data-service="security">
+                            <span
+                                class="text-3xl font-light font-label-caps text-outline/50 w-10 flex-shrink-0 pt-1">03</span>
+                            <div class="flex-1">
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Enterprise
+                                    Security</h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">Zero-trust
+                                    security frameworks and automated compliance monitoring to protect your enterprise's
+                                    most critical assets.</p>
+                                <a href="#contact-section"
+                                    class="inline-flex items-center gap-2 mt-4 text-secondary font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Item 04 -->
+                        <div class="group py-10 border-t border-b border-outline-variant/30 flex gap-10 items-start hover:bg-surface-container-lowest transition-colors duration-300 -mx-4 px-4 cursor-pointer service-item"
+                            data-service="support">
+                            <span
+                                class="text-3xl font-light font-label-caps text-outline/50 w-10 flex-shrink-0 pt-1">04</span>
+                            <div class="flex-1">
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mb-3">Strategic Support
+                                </h3>
+                                <p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">Ongoing
+                                    optimization and white-glove engineering support to ensure your technology stack
+                                    evolves with your business.</p>
+                                <a href="#contact-section"
+                                    class="inline-flex items-center gap-2 mt-4 text-secondary font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECTS SECTION ===================== -->
+        <section class="py-32 bg-surface border-t border-outline-variant/20" id="projects">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+                    <div>
+                        <span class="section-eyebrow text-label-caps font-label-caps text-secondary tracking-widest uppercase mb-4 block">Our Work</span>
+                        <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-tight tracking-tighter max-w-xl">
+                            Projects That <span class="text-secondary">Define Us.</span>
+                        </h2>
+                    </div>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-sm leading-relaxed">
+                        Production-grade applications crafted by Taurus engineers. Built for speed, scale, and seamless user experience.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+                    <!-- Project Card 1: PilaLess Clinic -->
+                    <div class="project-card project-card-anim bg-white border border-outline-variant/30 rounded-2xl overflow-hidden shadow-md flex flex-col">
+                        <!-- Live iframe Preview -->
+                        <div class="relative overflow-hidden bg-slate-50" style="height: 360px;">
+                            <iframe src="https://pilaless.vercel.app/" title="PilaLess Clinic Live Preview"
+                                scrolling="no" style="
+                                    border: none;
+                                    width: 1280px;
+                                    height: 800px;
+                                    transform: scale(0.38);
+                                    transform-origin: top left;
+                                    pointer-events: none;
+                                " loading="lazy"></iframe>
+                        </div>
+                        <!-- Card Footer -->
+                        <div class="p-6 border-t border-outline-variant/20 flex items-center justify-between">
+                            <div>
+                                <span
+                                    class="text-label-caps font-label-caps text-on-surface-variant tracking-widest text-[10px]">HEALTHCARE
+                                    SYSTEM</span>
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mt-1">PilaLess Clinic
+                                </h3>
+                            </div>
+                            <a href="https://pilaless.vercel.app/" target="_blank"
+                                class="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg font-label-caps text-[11px] hover:bg-slate-900 transition-colors flex-shrink-0">
+                                Open Site <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: KNT Athletics -->
+                    <div class="project-card project-card-anim bg-white border border-outline-variant/30 rounded-2xl overflow-hidden shadow-md flex flex-col">
+                        <!-- Live iframe Preview -->
+                        <div class="relative overflow-hidden bg-slate-50" style="height: 360px;">
+                            <iframe src="https://knt.vercel.app/home" title="KNT Athletics Live Preview" scrolling="no"
+                                style="
+                                    border: none;
+                                    width: 1280px;
+                                    height: 800px;
+                                    transform: scale(0.38);
+                                    transform-origin: top left;
+                                    pointer-events: none;
+                                " loading="lazy"></iframe>
+                        </div>
+                        <!-- Card Footer -->
+                        <div class="p-6 border-t border-outline-variant/20 flex items-center justify-between">
+                            <div>
+                                <span
+                                    class="text-label-caps font-label-caps text-on-surface-variant tracking-widest text-[10px]">E-COMMERCE
+                                    & APPAREL</span>
+                                <h3 class="text-headline-sm font-headline-sm text-on-background mt-1">KNT Athletics</h3>
+                            </div>
+                            <a href="https://knt.vercel.app/home" target="_blank"
+                                class="flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-lg font-label-caps text-[11px] hover:bg-slate-900 transition-colors flex-shrink-0">
+                                Open Site <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ARCHITECTURAL INTEGRITY ===================== -->
+        <section class="bg-white py-32 overflow-hidden relative border-t border-outline-variant/10">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+                <div class="mb-24">
+                    <h2
+                        class="arch-heading text-display-lg md:text-[8vw] font-black leading-[1.1] md:leading-[0.9] tracking-tighter text-black font-display-lg -ml-1 select-none overflow-hidden max-w-full break-words break-keep">
+                        Architectural <span class="text-tech-emerald block md:inline">Integrity.</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-32">
+                    <div class="md:col-span-5">
+                        <p class="arch-desc text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+                            We don't just write code; we build the structural foundations of future-proof enterprises.
+                            Our philosophy is rooted in precision, security, and performance at global scale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="border-t border-outline-variant/20 pt-16">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+                        <div class="arch-stat space-y-3">
+                            <span class="text-label-caps font-label-caps text-tech-emerald tracking-widest">01 //
+                                STRENGTH</span>
+                            <p class="text-body-md font-body-md text-on-background font-medium leading-snug">Engineered
+                                for billion-request scale without degradation.</p>
+                        </div>
+                        <div class="arch-stat space-y-3">
+                            <span class="text-label-caps font-label-caps text-tech-emerald tracking-widest">02 //
+                                PRECISION</span>
+                            <p class="text-body-md font-body-md text-on-background font-medium leading-snug">Unit
+                                testing and automated QA integrated into every sprint.</p>
+                        </div>
+                        <div class="arch-stat space-y-3">
+                            <span class="text-label-caps font-label-caps text-tech-emerald tracking-widest">03 //
+                                AGILITY</span>
+                            <p class="text-body-md font-body-md text-on-background font-medium leading-snug">Modular
+                                systems designed for rapid pivots and upgrades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== CONTACT SECTION ===================== -->
+        <section class="py-32 bg-slate-900 border-t border-outline-variant/10" id="contact-section">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                    <!-- Left: Info -->
+                    <div class="contact-info">
+                        <span
+                            class="text-label-caps font-label-caps text-tech-emerald tracking-widest uppercase mb-4 block">Get
+                            In Touch</span>
+                        <h2
+                            class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight tracking-tighter text-white">
+                            Let's Build <span class="text-tech-emerald">Together.</span>
+                        </h2>
+                        <p class="text-body-lg font-body-lg text-white/60 mb-10 leading-relaxed">
+                            Ready to engineer your next enterprise platform? Our architects are standing by to scope
+                            your vision.
+                        </p>
+                        <div class="space-y-5">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-tech-emerald">mail</span>
+                                <a href="mailto:martinezloredaven@gmail.com"
+                                    class="text-white/70 hover:text-tech-emerald transition-colors font-body-md text-body-md">martinezloredaven@gmail.com</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-tech-emerald">call</span>
+                                <a href="tel:+639063632755"
+                                    class="text-white/70 hover:text-tech-emerald transition-colors font-body-md text-body-md">+63
+                                    9063632755</a>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-tech-emerald">location_on</span>
+                                <span class="text-white/70 font-body-md text-body-md">Butuan City, Agusan del Norte,
+                                    Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <form id="contact-form" class="space-y-5" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                            <div>
+                                <label for="contact-name"
+                                    class="block text-label-caps font-label-caps text-white/60 mb-2 text-[10px] tracking-widest">Full
+                                    Name *</label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Jane Smith"
+                                    class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tech-emerald transition-colors rounded" />
+                            </div>
+                            <div>
+                                <label for="contact-email"
+                                    class="block text-label-caps font-label-caps text-white/60 mb-2 text-[10px] tracking-widest">Email
+                                    Address *</label>
+                                <input type="email" id="contact-email" name="email" required
+                                    placeholder="jane@company.com"
+                                    class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tech-emerald transition-colors rounded" />
+                            </div>
+                        </div>
+                        <div>
+                            <label for="contact-company"
+                                class="block text-label-caps font-label-caps text-white/60 mb-2 text-[10px] tracking-widest">Subject</label>
+                            <input type="text" id="contact-company" name="company" placeholder="Acme Corp"
+                                class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tech-emerald transition-colors rounded" />
+                        </div>
+                        <div>
+                            <label for="contact-message"
+                                class="block text-label-caps font-label-caps text-white/60 mb-2 text-[10px] tracking-widest">Message
+                                *</label>
+                            <textarea id="contact-message" name="message" required rows="4"
+                                placeholder="Tell us about your project…"
+                                class="w-full bg-white/5 border border-white/20 text-white placeholder-white/30 px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-tech-emerald transition-colors rounded resize-none"></textarea>
+                        </div>
+                        <div id="form-error" class="hidden text-red-400 font-label-caps text-[11px] tracking-wide">
+                        </div>
+                        <div id="form-success"
+                            class="hidden bg-tech-emerald/10 border border-tech-emerald/30 text-tech-emerald px-4 py-3 rounded font-label-caps text-[11px] tracking-wide">
+                            ✓ Message sent! We'll get back to you within 24 hours.
+                        </div>
+                        <button type="submit" id="form-submit-btn"
+                            class="w-full bg-tech-emerald text-slate-900 px-8 py-4 font-label-caps text-label-caps hover:bg-white hover:text-slate-900 transition-all active:scale-95 duration-300 flex items-center justify-center gap-3"
+                            aria-label="Submit contact form">
+                            Send Message <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="bg-surface py-10 border-t border-outline-variant/30">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pt-4">
+            <div class="col-span-1 md:col-span-1">
+                <a href="#top" class="mb-6 block">
+                    <img src="705464076_1582198350580127_93757285403700058_n-removebg-preview.png" alt="Taurus Logo"
+                        class="h-12 object-contain">
+                </a>
+                <p class="text-body-sm font-body-sm text-on-surface-variant mb-8 pr-4">
+                    Success Engineered. Providing high performance custom software for the global enterprise.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-label-caps font-label-caps text-on-background font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="#story">Our Story</a></li>
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="#services">How It Works</a></li>
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="#projects">Projects</a></li>
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="#contact-section">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-label-caps font-label-caps text-on-background font-bold mb-6">Support</h4>
+                <ul class="space-y-4">
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="privacy.html">Privacy Policy</a></li>
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="terms.html">Terms of Service</a></li>
+                    <li><a class="text-body-sm font-body-sm text-on-surface-variant hover:text-tech-emerald transition-colors"
+                            href="cookies.html">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-label-caps font-label-caps text-on-background font-bold mb-6">Connect</h4>
+                <a href="https://www.facebook.com/profile.php?id=100063699314735" target="_blank" rel="noopener noreferrer"
+                    class="inline-block hover:opacity-80 transition-opacity mb-3"
+                    aria-label="Find Taurus on Facebook">
+                    <!-- Facebook SVG Icon -->
+                    <svg fill="#1877F2" viewBox="0 0 24 24" class="w-10 h-10" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-10 pt-6 border-t border-outline-variant/30 flex justify-center text-center">
+            <p class="text-label-caps font-label-caps text-on-surface-variant text-[10px] tracking-widest uppercase">
+                © <span id="footer-year"></span> Taurus Software Services. Success Engineered.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===================== CONTACT MODAL (triggered by nav/hero buttons) ===================== -->
+    <div id="contact-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4" role="dialog"
+        aria-modal="true" aria-labelledby="modal-title">
+        <!-- Backdrop -->
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <!-- Modal Content -->
+        <div class="modal-inner relative bg-white rounded-2xl shadow-2xl w-full max-w-md p-8">
+            <button id="modal-close"
+                class="absolute top-4 right-4 text-on-surface-variant hover:text-on-background transition-colors p-1"
+                aria-label="Close contact modal">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <h2 id="modal-title" class="text-headline-sm font-headline-sm font-bold mb-2">Get in Touch</h2>
+            <p class="text-body-md font-body-md text-on-surface-variant mb-6">Tell us about your project and we'll
+                connect you with the right architect.</p>
+            <form id="modal-form" novalidate class="space-y-4">
+                <div>
+                    <label for="modal-name"
+                        class="block text-label-caps font-label-caps text-on-surface-variant mb-1 text-[10px] tracking-widest">Full
+                        Name *</label>
+                    <input type="text" id="modal-name" name="name" required placeholder="Jane Smith"
+                        class="w-full border border-outline-variant text-on-background placeholder-outline px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary transition-colors rounded" />
+                </div>
+                <div>
+                    <label for="modal-email"
+                        class="block text-label-caps font-label-caps text-on-surface-variant mb-1 text-[10px] tracking-widest">Email
+                        *</label>
+                    <input type="email" id="modal-email" name="email" required placeholder="jane@company.com"
+                        class="w-full border border-outline-variant text-on-background placeholder-outline px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary transition-colors rounded" />
+                </div>
+                <div>
+                    <label for="modal-message"
+                        class="block text-label-caps font-label-caps text-on-surface-variant mb-1 text-[10px] tracking-widest">Message
+                        *</label>
+                    <textarea id="modal-message" name="message" required rows="3"
+                        placeholder="Briefly describe your project…"
+                        class="w-full border border-outline-variant text-on-background placeholder-outline px-4 py-3 font-body-md text-body-md focus:outline-none focus:border-primary transition-colors rounded resize-none"></textarea>
+                </div>
+                <div id="modal-error" class="hidden text-red-500 font-label-caps text-[11px] tracking-wide"></div>
+                <div id="modal-success"
+                    class="hidden bg-secondary/10 border border-secondary/30 text-secondary px-4 py-3 rounded font-label-caps text-[11px] tracking-wide">
+                    ✓ Message sent! We'll be in touch shortly.
+                </div>
+                <button type="submit" id="modal-submit"
+                    class="w-full bg-slate-900 text-surface px-8 py-4 font-label-caps text-label-caps hover:bg-tech-emerald hover:text-slate-900 transition-all active:scale-95 duration-300 flex items-center justify-center gap-3 rounded">
+                    Send Message <span class="material-symbols-outlined text-sm">send</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

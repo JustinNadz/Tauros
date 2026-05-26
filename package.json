@@ -1,0 +1,10 @@
+{
+    "name": "tauros",
+    "version": "1.0.0",
+    "description": "Taurus — Enterprise Software Website",
+    "private": true,
+    "type": "module",
+    "engines": {
+        "node": ">=18"
+    }
+}

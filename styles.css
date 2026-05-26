@@ -1,0 +1,161 @@
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+
+/* ── Glass card (legacy) ── */
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* ── Tech grid util ── */
+.tech-grid {
+    background-image: linear-gradient(rgba(10, 37, 64, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(10, 37, 64, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ── Infinite marquee strip ── */
+@keyframes slide-infinite {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-slide-infinite {
+    animation: slide-infinite 30s linear infinite;
+    display: flex;
+    width: max-content;
+}
+
+/* ── Hero mesh gradient ── */
+.mesh-gradient {
+    background-color: #fcf8f9;
+    background-image:
+        radial-gradient(at 0% 0%,    rgba(38, 254, 220, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(10, 37, 64, 0.05)  0px, transparent 50%),
+        radial-gradient(at 100% 0%,  rgba(0, 245, 212, 0.1)   0px, transparent 50%);
+}
+
+/* ── Grid overlay ── */
+.grid-overlay {
+    background-image:
+        linear-gradient(to right,  rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ── Hero heading glow ── */
+.hero-text-glow {
+    text-shadow: 0 0 40px rgba(0, 245, 212, 0.2);
+}
+
+/* ── Word-split overflow clipping (GSAP needs this) ── */
+.word-wrap {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+.word {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* ── Nav active state (GSAP toggleClass) ── */
+a.nav-active {
+    color: #000 !important;
+    border-bottom: 2px solid #000;
+    padding-bottom: 4px;
+}
+
+/* ── Smooth scroll ── */
+html { scroll-behavior: smooth; }
+
+/* ── Spinner keyframe ── */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Button press micro-spring base ── */
+button, a { will-change: transform; }
+
+/* ── Project card hover lift ── */
+.project-card {
+    transition: box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+/* ── Focus rings for accessibility ── */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible {
+    outline: 2px solid #00F5D4;
+    outline-offset: 2px;
+}
+
+/* ── Select arrow option bg fix ── */
+select option {
+    background-color: #0D1117;
+    color: #ffffff;
+}
+
+/* ── Story section — value card 3D tilt ── */
+.story-value-card {
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+/* ── Story timeline — vertical line clip animation support ── */
+.story-timeline {
+    overflow: visible;
+}
+
+/* ── Story quote text balance ── */
+.story-quote blockquote p {
+    text-wrap: balance;
+}
+
+/* ── Mobile-menu default state (GSAP controls height) ── */
+#mobile-menu {
+    overflow: hidden;
+}
+
+/* ── Project card smooth box-shadow transition ── */
+.project-card {
+    transition: box-shadow 0.3s ease;
+}
+
+/* ── Arch heading — contain paint during word animation ── */
+.arch-heading {
+    contain: layout;
+    will-change: transform;
+}
+
+/* ── Section reveal base state (fallback if JS fails) ── */
+@media (prefers-reduced-motion: reduce) {
+    .hero-tagline, .hero-sub, .hero-ctas,
+    .hero-blob-1, .hero-blob-2,
+    [data-gsap="nav"] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+/* ── Smooth image rendering on scaled iframes ── */
+.project-card iframe {
+    image-rendering: auto;
+}
+
+/* ── Story quote text balance ── */
+.story-quote blockquote {
+    text-wrap: balance;
+}
+
+/* ── How It Works — uniform gap on mobile ── */
+@media (max-width: 767px) {
+    #services .flex.flex-col.md\\:flex-row {
+        gap: 1.5rem;
+    }
+}
